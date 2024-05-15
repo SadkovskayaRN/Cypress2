@@ -12,8 +12,8 @@ describe('НАЗВАНИЕ_ГРУППЫ_ТЕСТОВ', function () {
     it('успешная авторизация', function () {
         cy.get('.login__content').contains('Битва покемонов'); // Проверка наличия текста
         cy.get('.login__content').should('be.visible'); // Элемент виден пользователю
-        cy.get(':nth-child(1) > .auth__input').type('sadkovskayarn@yandex.ru'); // Ввести верный логин
-        cy.get('#password').type('Ufamuf39'); // Ввести верный пароль
+        cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN'); // Ввести верный логин
+        cy.get('#password').type('USER_PASSWORD'); // Ввести верный пароль
         cy.get('.auth__button').click(); // Нажать кнопку войти
         cy.get('.header__btns > [href="/shop"]').click();// перейти на страницу магазина
         cy.get('.available > button').first().click();// нажать на кнопку купить у доступного аватара
